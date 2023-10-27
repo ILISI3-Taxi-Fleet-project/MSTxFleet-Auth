@@ -16,5 +16,4 @@ public class AppUser {
     private String nom;
     private String prenom;
     private String email;
-
 }
