@@ -42,7 +42,7 @@ public class SecurityConf {
         return httpSecurity
                 .sessionManagement(s->s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))// we won't make the auth on server side using jwt
                 .csrf(AbstractHttpConfigurer::disable)// when we want to use the stateless auth we should disable the csrf service
-                .authorizeHttpRequests(a-> a.requestMatchers("/auth/login/**").permitAll())
+                .authorizeHttpRequests(a-> a.requestMatchers("/auth/**").permitAll())
                 .authorizeHttpRequests(a-> a.anyRequest().authenticated())
                 .oauth2ResourceServer(auth -> auth.jwt(Customizer.withDefaults()))
                 .build();

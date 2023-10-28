@@ -1,6 +1,7 @@
-package com.ilisi.mstxfleetauth.security;
+package com.ilisi.mstxfleetauth.web;
 
 import com.ilisi.mstxfleetauth.dto.UserDTO;
+import com.ilisi.mstxfleetauth.services.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.AuthenticationException;
@@ -15,7 +16,7 @@ import java.util.Map;
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 @Slf4j
-public class SecurityController {
+public class AuthenticationController {
 
     private final AuthenticationService authenticationService;
 
@@ -33,4 +34,7 @@ public class SecurityController {
             throw e; // Rethrow the exception for handling in a global exception handler, if configured.
         }
     }
+
+
+
 }

@@ -1,6 +1,7 @@
-package com.ilisi.mstxfleetauth.security;
+package com.ilisi.mstxfleetauth.services;
 
 import com.ilisi.mstxfleetauth.dto.UserDTO;
+import com.ilisi.mstxfleetauth.security.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

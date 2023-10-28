@@ -1,14 +1,8 @@
-package com.ilisi.mstxfleetauth.entity;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+package com.ilisi.mstxfleetauth.dto;
 
 import java.util.UUID;
 
-@Data
-@AllArgsConstructor @NoArgsConstructor
-public class AppUser {
+public class RegisterUserDTO {
 
     private UUID id;
     private String username;

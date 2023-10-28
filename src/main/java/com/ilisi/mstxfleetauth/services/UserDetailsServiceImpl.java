@@ -27,4 +27,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 .authorities(appUser.getUser_type())
                 .build();
     }
+
+
+
 }
