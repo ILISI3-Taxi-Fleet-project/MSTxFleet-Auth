@@ -10,3 +10,4 @@ eureka:
   client:
     register-with-eureka: false
     enabled: false
+MONGO_SERVICE_URL: localhost:8081

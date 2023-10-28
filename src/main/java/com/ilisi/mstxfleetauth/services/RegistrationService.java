@@ -13,7 +13,6 @@ public class RegistrationService {
 
     private final MongoServiceClient mongoServiceClient;
 
-
     public boolean registerNewUser(AppUser appUser)
     {
         log.info("Received Registration request for username: {}", appUser.getUsername());
