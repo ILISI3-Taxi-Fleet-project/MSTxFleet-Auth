@@ -1,0 +1,4 @@
+jwt:
+  key: ${JWT_KEY}
+  access-token-expiration: 10
+  refresh-token-expiration: 30

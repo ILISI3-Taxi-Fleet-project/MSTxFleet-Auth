@@ -1,0 +1,12 @@
+jwt:
+  key: "YourSecretKeyHereYourSecretKeyHereYourSecretKeyHereYourSecretKeyHere"
+  access-token-expiration: 10
+  refresh-token-expiration: 30
+spring:
+  cloud:
+    config:
+      enabled: false
+eureka:
+  client:
+    register-with-eureka: false
+    enabled: false
