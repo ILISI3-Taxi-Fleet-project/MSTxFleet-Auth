@@ -6,8 +6,8 @@ spring:
   cloud:
     config:
       enabled: false
-eureka:
-  client:
-    register-with-eureka: false
-    enabled: false
-MONGO_SERVICE_URL: localhost:8081
+    discovery:
+      enabled: true
+  application:
+    name: MSTxFleet-Auth
+MONGO_SERVICE_URL: localhost:8888/MSTXFLEET-DBS-MONGODB

@@ -3,6 +3,7 @@ package com.ilisi.mstxfleetauth.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.Transient;
 
 import java.util.UUID;
 
