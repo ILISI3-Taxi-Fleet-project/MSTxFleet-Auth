@@ -11,3 +11,8 @@ spring:
   application:
     name: MSTxFleet-Auth
 MONGO_SERVICE_URL: localhost:8888/MSTXFLEET-DBS-MONGODB
+
+logging:
+  level:
+    feign: DEBUG
+    org.springframework.data.rest: DEBUG
