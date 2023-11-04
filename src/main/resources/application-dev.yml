@@ -6,7 +6,13 @@ spring:
   cloud:
     config:
       enabled: false
-eureka:
-  client:
-    register-with-eureka: false
-    enabled: false
+    discovery:
+      enabled: true
+  application:
+    name: MSTxFleet-Auth
+MONGO_SERVICE_URL: localhost:8888/MSTXFLEET-DBS-MONGODB
+
+logging:
+  level:
+    feign: DEBUG
+    org.springframework.data.rest: DEBUG

@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private final UserServiceFreignClient userServiceFreignClient;
+    private final MongoServiceClient userServiceFreignClient;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
