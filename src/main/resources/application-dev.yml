@@ -16,3 +16,5 @@ logging:
   level:
     feign: DEBUG
     org.springframework.data.rest: DEBUG
+server:
+  port: 0
