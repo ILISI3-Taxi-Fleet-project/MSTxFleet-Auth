@@ -21,12 +21,12 @@ public class AuthenticationController {
     private final AuthenticationService authenticationService;
 
     @PostMapping("/login")
-    public Map<String, String> login(@RequestBody UserDTO userDTO) {
+    public Map<String, Object> login(@RequestBody UserDTO userDTO) {
         log.info("Received login request for username: {}", userDTO.getUsername());
 
         try {
             // Authentication logic
-            Map<String, String> tokens = authenticationService.authenticate(userDTO);
+            Map<String, Object> tokens = authenticationService.authenticate(userDTO);
             log.info("Authentication successful for user: {}", userDTO.getUsername());
             return tokens;
         } catch (AuthenticationException e) {

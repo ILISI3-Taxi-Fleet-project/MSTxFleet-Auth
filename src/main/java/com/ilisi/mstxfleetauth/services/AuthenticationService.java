@@ -19,7 +19,7 @@ public class AuthenticationService {
     private final AuthenticationManager authenticationManager;
     private final JwtTokenProvider jwtTokenProvider;
 
-    public Map<String, String> authenticate(UserDTO userDTO) {
+    public Map<String, Object> authenticate(UserDTO userDTO) {
         Authentication authentication = authenticationManager.authenticate(
             new UsernamePasswordAuthenticationToken(userDTO.getUsername(), userDTO.getPassword())
         );
@@ -28,9 +28,10 @@ public class AuthenticationService {
         String accessToken = jwtTokenProvider.generateAccessToken(userDetails);
         String refreshToken = jwtTokenProvider.generateRefreshToken(userDetails);
 
-        Map<String, String> tokenMap = new HashMap<>();
+        Map<String, Object> tokenMap = new HashMap<>();
         tokenMap.put("access-token", accessToken);
         tokenMap.put("refresh-token", refreshToken);
+        tokenMap.put("roles", userDetails.getAuthorities());
 
         return tokenMap;
     }
