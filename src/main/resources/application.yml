@@ -1,5 +1,3 @@
-jwt:
-  key: ${JWT_KEY}
-  access-token-expiration: 10
-  refresh-token-expiration: 30
-MONGO_SERVICE_URL: localhost:8888/MSTXFLEET-DBS-MONGODB
+spring:
+  profiles:
+    active: prod
